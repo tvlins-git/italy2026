@@ -1,706 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Italy Family Vacation 2026 — Venice & Lake Garda</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: #f5f5f5;
-    }
-    header {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      padding: 3rem 1rem;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-    header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    header p { font-size: 1.1rem; opacity: 0.95; }
-    .container { max-width: 900px; margin: 0 auto; padding: 0 1rem; }
-    nav {
-      background: white;
-      padding: 1rem 0;
-      margin-bottom: 2rem;
-      border-bottom: 2px solid #667eea;
-      position: sticky;
-      top: 0;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
-    nav a {
-      text-decoration: none;
-      color: #667eea;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    nav a:hover { color: #764ba2; }
-    .section { background: white; margin-bottom: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
-    .section-header {
-      background: #667eea;
-      color: white;
-      padding: 1.5rem;
-      font-size: 1.5rem;
-      font-weight: 600;
-    }
-    .section-content { padding: 2rem; }
-    .overview {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-    .stat-card {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      padding: 1.5rem;
-      border-radius: 8px;
-      text-align: center;
-    }
-    .stat-card h3 { font-size: 2rem; margin-bottom: 0.5rem; }
-    .stat-card p { font-size: 0.9rem; opacity: 0.9; }
-    .day-card {
-      background: white;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      margin-bottom: 1.5rem;
-      overflow: hidden;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .day-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
-    .day-image {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-      display: block;
-    }
-    .day-content { padding: 1.5rem; }
-    .day-title {
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: #667eea;
-      margin-bottom: 0.5rem;
-    }
-    .day-subtitle {
-      color: #666;
-      margin-bottom: 1rem;
-      font-size: 0.95rem;
-      font-weight: 500;
-    }
-    .day-description { color: #555; margin-bottom: 1rem; line-height: 1.7; }
-    .highlights {
-      background: #f9f9f9;
-      padding: 1rem;
-      border-left: 4px solid #667eea;
-      margin-bottom: 1rem;
-      border-radius: 4px;
-    }
-    .highlights h4 { color: #667eea; margin-bottom: 0.5rem; font-size: 0.95rem; }
-    .highlights ul { list-style: none; padding-left: 1rem; }
-    .highlights li { margin-bottom: 0.4rem; color: #555; position: relative; }
-    .highlights li:before { content: "✓"; color: #667eea; font-weight: bold; position: absolute; left: -1rem; }
-    .tag {
-      display: inline-block;
-      background: #667eea;
-      color: white;
-      padding: 0.4rem 0.8rem;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      margin-right: 0.5rem;
-      margin-bottom: 0.5rem;
-    }
-    .tag.rest { background: #667eea; }
-    .tag.activity { background: #764ba2; }
-    .tag.travel { background: #f093fb; }
-    .info-box {
-      background: #e8f4fd;
-      border-left: 4px solid #2196F3;
-      padding: 1rem;
-      margin: 1rem 0;
-      border-radius: 4px;
-    }
-    .info-box strong { color: #0066cc; }
-    .booking-link {
-      display: inline-block;
-      background: #667eea;
-      color: white;
-      padding: 0.6rem 1rem;
-      border-radius: 4px;
-      text-decoration: none;
-      margin: 0.5rem 0.5rem 0.5rem 0;
-      font-size: 0.9rem;
-      transition: background 0.3s;
-    }
-    .booking-link:hover { background: #764ba2; }
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 2rem;
-      margin-top: 3rem;
-    }
-    footer a { color: #667eea; text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
-    .travel-icon { font-size: 2rem; margin-bottom: 0.5rem; }
-    .agenda-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 1rem;
-    }
-    .agenda-table tr:nth-child(even) { background: #f9f9f9; }
-    .agenda-table th {
-      background: #667eea;
-      color: white;
-      padding: 0.75rem;
-      text-align: left;
-      font-weight: 600;
-    }
-    .agenda-table td {
-      padding: 0.75rem;
-      border-bottom: 1px solid #ddd;
-    }
-    .agenda-table strong { color: #667eea; }
-    @media (max-width: 768px) {
-      header h1 { font-size: 1.8rem; }
-      nav ul { flex-direction: column; gap: 0.5rem; }
-      nav ul li a { display: block; padding: 0.5rem; }
-      .overview { grid-template-columns: 1fr; }
-      .day-image { height: 200px; }
-      .agenda-table { font-size: 0.9rem; }
-      .agenda-table td { padding: 0.5rem; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cádiz Family Holiday 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy:      #0D3F6B;
+    --ocean:     #1E6B9E;
+    --teal:      #0097A7;
+    --terracota: #C1622F;
+    --sand:      #F5EDD6;
+    --sand-light:#FAF7F2;
+    --accent:    #E8D5A3;
+    --purple:    #6B4C8B;
+    --brown:     #7A5C3A;
+    --dark:      #2C2C2C;
+    --mid:       #666;
+    --white:     #fff;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background: var(--sand-light); color: var(--dark); font-size: 15px; line-height: 1.65; }
+
+  .hero { position: relative; height: 100vh; min-height: 560px; background: var(--navy); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; background-image: url('https://images.pexels.com/photos/37240442/pexels-photo-37240442.jpeg?auto=compress&cs=tinysrgb&w=1600'); background-size: cover; background-position: center; opacity: 0.38; }
+  .hero-stripe { position: absolute; bottom: 0; left: 0; right: 0; height: 6px; background: linear-gradient(90deg, var(--terracota), var(--accent), var(--terracota)); }
+  .hero-content { position: relative; z-index: 1; padding: 2rem; }
+  .hero-eyebrow { font-size: .75rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+  .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(3.5rem,10vw,7rem); font-weight: 900; color: var(--white); line-height: 1.0; margin-bottom: .3rem; }
+  .hero-subtitle { font-family: 'Playfair Display', serif; font-size: clamp(1.3rem,4vw,2.2rem); font-style: italic; color: var(--accent); margin-bottom: 1.5rem; }
+  .hero-divider { width: 60px; height: 3px; background: var(--terracota); margin: 0 auto 1.5rem; }
+  .hero-meta { font-size: 1rem; font-weight: 300; color: rgba(255,255,255,.8); letter-spacing: .05em; }
+  .hero-meta strong { font-weight: 600; color: var(--white); }
+  .hero-scroll { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,.5); font-size: .7rem; letter-spacing: .15em; text-transform: uppercase; display: flex; flex-direction: column; align-items: center; gap: .4rem; }
+  .hero-scroll::after { content: ''; display: block; width: 1px; height: 30px; background: rgba(255,255,255,.3); animation: scrollline 1.8s ease-in-out infinite; }
+  @keyframes scrollline { 0%,100%{ opacity:.3; transform:scaleY(.5); } 50%{ opacity:1; transform:scaleY(1); } }
+
+  .day-nav { position: sticky; top: 0; z-index: 100; background: var(--navy); border-bottom: 3px solid var(--terracota); overflow-x: auto; scrollbar-width: none; }
+  .day-nav::-webkit-scrollbar { display: none; }
+  .day-nav-inner { display: flex; min-width: max-content; padding: 0 1rem; }
+  .day-tab { display: flex; flex-direction: column; align-items: center; padding: .6rem .9rem; color: rgba(255,255,255,.55); text-decoration: none; font-size: .72rem; font-weight: 500; border-bottom: 3px solid transparent; margin-bottom: -3px; transition: color .2s, border-color .2s; white-space: nowrap; line-height: 1.2; }
+  .day-tab span.num { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; line-height: 1; }
+  .day-tab:hover { color: var(--white); }
+  .day-tab.active { color: var(--white); }
+  .day-tab.active.type-beach     { border-bottom-color: var(--teal); }
+  .day-tab.active.type-meeting   { border-bottom-color: var(--purple); }
+  .day-tab.active.type-excursion { border-bottom-color: var(--ocean); }
+  .day-tab.active.type-long      { border-bottom-color: var(--terracota); }
+  .day-tab.active.type-transit   { border-bottom-color: var(--brown); }
+
+  .main { max-width: 860px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+  .legend { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; padding: 1.25rem 0; border-bottom: 1px solid var(--accent); margin-bottom: 2rem; }
+  .legend-item { display: flex; align-items: center; gap: .4rem; font-size: .78rem; color: var(--mid); font-weight: 500; }
+  .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+  .day-card { margin-bottom: 3rem; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 16px rgba(13,63,107,.08); background: var(--white); }
+  .day-photo { width: 100%; height: 280px; object-fit: cover; display: block; background: var(--accent); }
+  .day-header { display: flex; align-items: center; justify-content: space-between; padding: .85rem 1.25rem; color: var(--white); }
+  .day-header-left { display: flex; align-items: baseline; gap: .7rem; }
+  .day-num { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; line-height: 1; }
+  .day-date { font-size: .8rem; opacity: .8; }
+  .day-type-badge { font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; background: rgba(255,255,255,.18); padding: .25rem .65rem; border-radius: 20px; }
+  .header-beach     { background: var(--teal); }
+  .header-meeting   { background: var(--purple); }
+  .header-excursion { background: var(--ocean); }
+  .header-long      { background: var(--terracota); }
+  .header-transit   { background: var(--brown); }
+  .day-body { padding: 1.25rem 1.5rem 1.5rem; }
+  .day-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; margin-bottom: .75rem; line-height: 1.25; }
+  .day-desc { font-size: .92rem; line-height: 1.7; color: var(--dark); margin-bottom: 1rem; }
+  .day-tip { background: var(--sand); border-left: 3px solid var(--accent); padding: .65rem 1rem; border-radius: 0 4px 4px 0; font-size: .83rem; color: var(--mid); font-style: italic; margin-bottom: 1rem; }
+  .day-tip::before { content: '▸ '; font-style: normal; }
+  .day-links { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .75rem; }
+  .day-link { display: inline-flex; align-items: center; gap: .3rem; font-size: .78rem; font-weight: 500; color: var(--ocean); text-decoration: none; border: 1px solid var(--ocean); padding: .25rem .7rem; border-radius: 20px; transition: background .15s, color .15s; }
+  .day-link:hover { background: var(--ocean); color: var(--white); }
+
+  .section-title { font-family: 'Playfair Display', serif; font-size: 1.9rem; font-weight: 700; color: var(--navy); margin: 3rem 0 .4rem; }
+  .section-rule { height: 3px; background: linear-gradient(90deg, var(--terracota), var(--accent)); margin-bottom: 1.5rem; }
+
+  .ticket-card { background: var(--white); border-radius: 4px; overflow: hidden; margin-bottom: 1.25rem; box-shadow: 0 1px 8px rgba(13,63,107,.07); }
+  .ticket-header { display: flex; justify-content: space-between; align-items: center; padding: .55rem 1rem; color: var(--white); font-size: .78rem; }
+  .ticket-header .day-ref { opacity: .85; font-weight: 400; }
+  .ticket-header .urgency { font-weight: 700; letter-spacing: .06em; font-size: .72rem; text-transform: uppercase; }
+  .ticket-essential { background: var(--terracota); }
+  .ticket-recommended { background: var(--ocean); }
+  .ticket-body { padding: .9rem 1rem 1rem; }
+  .ticket-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: .4rem; }
+  .ticket-essential .ticket-name { color: var(--terracota); }
+  .ticket-recommended .ticket-name { color: var(--ocean); }
+  .ticket-notes { font-size: .85rem; color: var(--dark); line-height: 1.6; margin-bottom: .6rem; }
+  .ticket-link { font-size: .8rem; color: var(--ocean); text-decoration: none; font-weight: 500; }
+  .ticket-link:hover { text-decoration: underline; }
+
+  .free-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+  .free-item { background: var(--white); border-radius: 4px; padding: .85rem 1rem; box-shadow: 0 1px 6px rgba(13,63,107,.06); }
+  .free-item-name { font-size: .82rem; font-weight: 600; color: var(--navy); margin-bottom: .25rem; }
+  .free-item-note { font-size: .78rem; color: var(--mid); line-height: 1.5; }
+
+  .footer { background: var(--navy); color: rgba(255,255,255,.6); text-align: center; padding: 2.5rem 1.5rem; font-size: .85rem; }
+  .footer strong { color: var(--accent); font-family: 'Playfair Display', serif; font-style: italic; font-size: 1rem; }
+
+  @media (max-width:600px) { .free-grid { grid-template-columns: 1fr; } .day-photo { height: 200px; } .hero-title { font-size: 3rem; } }
+</style>
 </head>
 <body>
-  <header>
-    <h1>🇮🇹 Italy Family Holiday 2026</h1>
-    <p>Venice & Lake Garda — August 1–15</p>
-  </header>
 
-  <div class="container">
-    <nav>
-      <ul>
-        <li><a href="#overview">Overview</a></li>
-        <li><a href="#agenda">Agenda</a></li>
-        <li><a href="#venice">Venice</a></li>
-        <li><a href="#garda">Lake Garda</a></li>
-        <li><a href="#planning">Planning</a></li>
-      </ul>
-    </nav>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-stripe"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Andalucía · Spain</p>
+    <h1 class="hero-title">Cádiz</h1>
+    <p class="hero-subtitle">Family Holiday 2026</p>
+    <div class="hero-divider"></div>
+    <p class="hero-meta"><strong>20 June – 2 July 2026</strong><br>2 adults · children aged 6 &amp; 12 · Based in Cádiz old town</p>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
 
-    <!-- Quick Agenda/Itinerary Table -->
-    <section class="section" id="agenda">
-      <div class="section-header">📅 Quick Itinerary at a Glance</div>
-      <div class="section-content">
-        <table class="agenda-table">
-          <tr>
-            <th>Date</th>
-            <th>Day</th>
-            <th>Activity</th>
-          </tr>
-          <tr>
-            <td><strong>Aug 1</strong></td>
-            <td>Thursday</td>
-            <td>✈️ Arrive Venice (SK2691)</td>
-          </tr>
-          <tr>
-            <td><strong>Aug 2</strong></td>
-            <td>Friday</td>
-            <td>🛶 Grand Canal & St. Mark's Basilica</td>
-          </tr>
-          <tr>
-            <td><strong>Aug 3</strong></td>
-            <td>Saturday</td>
-            <td>🎨 Murano glassblowing & Burano</td>
-          </tr>
-          <tr>
-            <td><strong>Aug 4</strong></td>
-            <td>Sunday</td>
-            <td>🚗 Transfer to Lake Garda (2 hrs)</td>
-          </tr>
-          <tr>
-            <td><strong>Aug 5</strong></td>
-            <td>Monday</td>
-            <td>🌊 Camp day — beach & pools</td>
-          </tr>
-          <tr>
-            <td><strong>Aug 6</strong></td>
-            <td>Tuesday</td>
-            <td>🏛️ Verona — Arena & Juliet's House</td>
-          </tr>
-          <tr>
-            <td><strong>Aug 7</strong></td>
-            <td>Wednesday</td>
-            <td>🌊 Camp day — Gardaland theme park</td>
-          </tr>
-          <tr>
-            <td><strong>Aug 8</strong></td>
-            <td>Thursday</td>
-            <td>🏰 Sirmione — medieval castle</td>
-          </tr>
-          <tr>
-            <td><strong>Aug 9</strong></td>
-            <td>Friday</td>
-            <td>🌊 Camp day — Lazise village walk</td>
-          </tr>
-          <tr>
-            <td><strong>Aug 10</strong></td>
-            <td>Saturday</td>
-            <td>🚡 Malcesine — cable car to Monte Baldo</td>
-          </tr>
-          <tr>
-            <td><strong>Aug 11</strong></td>
-            <td>Sunday</td>
-            <td>🌊 Camp day — sports & pools</td>
-          </tr>
-          <tr>
-            <td><strong>Aug 12</strong></td>
-            <td>Monday</td>
-            <td>🏛️ Mantua — Palazzo Ducale & Renaissance</td>
-          </tr>
-          <tr>
-            <td><strong>Aug 13</strong></td>
-            <td>Tuesday</td>
-            <td>🌊 Camp day — free choice</td>
-          </tr>
-          <tr>
-            <td><strong>Aug 14</strong></td>
-            <td>Wednesday</td>
-            <td>🚢 Garda town & car ferry west</td>
-          </tr>
-          <tr>
-            <td><strong>Aug 15</strong></td>
-            <td>Thursday</td>
-            <td>✈️ Return home (SK2692)</td>
-          </tr>
-        </table>
-      </div>
-    </section>
+<nav class="day-nav">
+  <div class="day-nav-inner">
+    <a href="#day1"  class="day-tab type-transit"  ><span class="num">1</span>Arrival</a>
+    <a href="#day2"  class="day-tab type-beach"    ><span class="num">2</span>Beach</a>
+    <a href="#day3"  class="day-tab type-excursion"><span class="num">3</span>El Puerto</a>
+    <a href="#day4"  class="day-tab type-meeting"  ><span class="num">4</span>Culture</a>
+    <a href="#day5"  class="day-tab type-long"     ><span class="num">5</span>Ronda</a>
+    <a href="#day6"  class="day-tab type-beach"    ><span class="num">6</span>Beach</a>
+    <a href="#day7"  class="day-tab type-meeting"  ><span class="num">7</span>Old Town</a>
+    <a href="#day8"  class="day-tab type-excursion"><span class="num">8</span>Jerez</a>
+    <a href="#day9"  class="day-tab type-beach"    ><span class="num">9</span>Beach</a>
+    <a href="#day10" class="day-tab type-meeting"  ><span class="num">10</span>Park</a>
+    <a href="#day11" class="day-tab type-excursion"><span class="num">11</span>Bolonia</a>
+    <a href="#day12" class="day-tab type-excursion"><span class="num">12</span>Seville</a>
+    <a href="#day13" class="day-tab type-transit"  ><span class="num">13</span>Departure</a>
+    <a href="#tickets" class="day-tab type-transit"><span class="num">↓</span>Tickets</a>
+  </div>
+</nav>
 
-    <!-- Overview Section -->
-    <section class="section" id="overview">
-      <div class="section-header">📋 Trip Overview</div>
-      <div class="section-content">
-        <div class="overview">
-          <div class="stat-card">
-            <div class="travel-icon">✈️</div>
-            <h3>15 Days</h3>
-            <p>August 1–15, 2026</p>
-          </div>
-          <div class="stat-card">
-            <div class="travel-icon">👨‍👩‍👧‍👦</div>
-            <h3>2 Adults</h3>
-            <p>2 Children (6 & 12 yrs)</p>
-          </div>
-          <div class="stat-card">
-            <div class="travel-icon">🏠</div>
-            <h3>2 Locations</h3>
-            <p>Venice (3 nights) + Lake Garda (11 nights)</p>
-          </div>
-        </div>
-        
-        <h3 style="margin-top: 2rem; color: #667eea;">What to Expect</h3>
-        <p style="margin: 1rem 0; line-height: 1.8;">
-          This itinerary balances magical cultural moments (gondolas, glassblowing, Renaissance palaces) with plenty of downtime, water play, and family-friendly attractions. Every other day at Lake Garda is a "camp day" where you rest, swim, and enjoy the on-site facilities. The alternate days are short car excursions (30 min–1 hour) to nearby attractions.
-        </p>
-        
-        <div class="info-box">
-          <strong>📍 Geography Note:</strong> The campsite is on Lake Garda (Veneto region), not near Tuscany. But Lake Garda is arguably better for families — it has excellent infrastructure, stunning scenery, and tons of kid-friendly day trips.
-        </div>
-      </div>
-    </section>
-
-    <!-- Venice Section -->
-    <section class="section" id="venice">
-      <div class="section-header">🛶 Venice (Aug 1–4)</div>
-      <div class="section-content">
-        <p style="margin-bottom: 1rem; font-style: italic;">Three magical days to explore the city of canals. Arrival on August 1; transfer to Lake Garda on August 4 morning.</p>
-
-        <!-- Day 1 -->
-        <div class="day-card">
-          <img src="https://images.pexels.com/photos/4218730/pexels-photo-4218730.jpeg" alt="Venice water taxi arrival" class="day-image">
-          <div class="day-content">
-            <div class="day-title">Day 1 — Arrival (August 1)</div>
-            <div class="day-subtitle">CPH → Venice | Flight SK2691</div>
-            <div class="day-description">
-              Land at Venice Marco Polo Airport. Take the Alilaguna water bus (€15/person, 75 min) directly to your Airbnb near St. Mark's Square or Rialto. Settle in, rest, then wander to a nearby <em>bacaro</em> (wine bar) for your first Venetian dinner.
-            </div>
-            <div class="highlights">
-              <h4>Pro Tips</h4>
-              <ul>
-                <li>Book Alilaguna tickets online beforehand</li>
-                <li>Shoulder and knees must be covered for St. Mark's — bring scarves</li>
-                <li>Stay in Dorsoduro or Cannaregio for quieter neighborhoods</li>
-              </ul>
-            </div>
-            <a href="https://www.alilaguna.it/en" class="booking-link" target="_blank">Book water bus</a>
-          </div>
-        </div>
-
-        <!-- Day 2 -->
-        <div class="day-card">
-          <img src="https://images.pexels.com/photos/16458299/pexels-photo-16458299.jpeg" alt="St. Mark's Basilica interior" class="day-image">
-          <div class="day-content">
-            <div class="day-title">Day 2 — Grand Canal & St. Mark's (August 2)</div>
-            <div class="day-subtitle">🛶 Venice exploration</div>
-            <div class="day-description">
-              Start with a vaporetto (water bus) ride down the Grand Canal — 45 minutes of pure magic. Watch gondolas, bridges, and Renaissance palaces glide by. Then visit the glittering St. Mark's Basilica (book timed entry online!) and climb the Campanile bell tower for lake and rooftop views. Afternoon: wander Dorsoduro's quiet canals and the Accademia Bridge.
-            </div>
-            <div class="highlights">
-              <h4>Must-See</h4>
-              <ul>
-                <li>Vaporetto Line 1, Grand Canal (full 45-min route)</li>
-                <li>St. Mark's Basilica — golden mosaics, stunning interior</li>
-                <li>Campanile bell tower — 100m views over the city</li>
-                <li>Accademia Bridge sunset photo</li>
-              </ul>
-            </div>
-            <span class="tag rest">Full day Venice</span>
-            <br>
-            <a href="https://tickets.basilicasanmarco.it" class="booking-link" target="_blank">Book St. Mark's tickets</a>
-          </div>
-        </div>
-
-        <!-- Day 3 -->
-        <div class="day-card">
-          <img src="https://images.pexels.com/photos/30089038/pexels-photo-30089038.jpeg" alt="Burano boats and houses" class="day-image">
-          <div class="day-content">
-            <div class="day-title">Day 3 — Murano & Burano Islands (August 3)</div>
-            <div class="day-subtitle">🎨 Glass blowing & rainbow houses</div>
-            <div class="day-description">
-              Ferry to Murano (Line 4.1, ~15 min) and book a glass-blowing workshop. Watch master craftsmen shape molten glass into stunning pieces — kids can often make their own mosaic tile or bracelet. Then ferry to Burano, the island of impossibly colourful houses. Lunch at a trattoria. Return by mid-afternoon; optional sunset gondola ride (€80 per gondola, magical!).
-            </div>
-            <div class="highlights">
-              <h4>Activity Highlights</h4>
-              <ul>
-                <li>Murano glass-blowing demonstration (book in advance!)</li>
-                <li>Hands-on workshop — make your own Murano piece</li>
-                <li>Burano's rainbow houses — Instagram gold for the 12-year-old</li>
-                <li>Optional: Gondola ride at sunset</li>
-              </ul>
-            </div>
-            <span class="tag activity">Interactive experience</span>
-            <br>
-            <a href="https://www.viator.com/tours/Venice/Murano-Glass-Factory-Experience-Factory-Tour-and-Workshop/d522-9555P1" class="booking-link" target="_blank">Book Murano workshop (Viator)</a>
-          </div>
-        </div>
-
-        <!-- Day 4 -->
-        <div class="day-card">
-          <img src="https://images.pexels.com/photos/37321079/pexels-photo-37321079.jpeg" alt="Rialto Market Venice" class="day-image">
-          <div class="day-content">
-            <div class="day-title">Day 4 — Transfer to Lake Garda (August 4)</div>
-            <div class="day-subtitle">🚗 Venice → Bardolino</div>
-            <div class="day-description">
-              Morning: explore the Rialto Market (go before 11am for the full bustle). Pick up your rental car from Piazzale Roma or Tronchetto. Drive ~2 hours along the A4 motorway to Camping Cisano/San Vito on Lake Garda. Check in, discover the lagoon pools and slides, have pizza with a lake view.
-            </div>
-            <div class="highlights">
-              <h4>Logistics</h4>
-              <ul>
-                <li>Rialto Market open early, closes by 11am</li>
-                <li>Rent car evening of Aug 3 to save time</li>
-                <li>A4 motorway direct to Bardolino (~2 hrs)</li>
-                <li>Campsite has restaurants, beach, pools</li>
-              </ul>
-            </div>
-            <span class="tag travel">Travel day</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Lake Garda Section -->
-    <section class="section" id="garda">
-      <div class="section-header">🏕️ Lake Garda (Aug 4–15)</div>
-      <div class="section-content">
-        <p style="margin-bottom: 1rem; font-style: italic;">11 nights at Camping Cisano/San Vito. Alternating camp days (rest, swim, pools) with day trips to nearby attractions.</p>
-
-        <!-- Day 5 -->
-        <div class="day-card">
-          <img src="https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg" alt="Lake beach sunset" class="day-image">
-          <div class="day-content">
-            <div class="day-title">Day 5 — Camp Day (August 5)</div>
-            <div class="day-subtitle">🌊 Beach, pools & Bardolino walk</div>
-            <div class="day-description">
-              Settle in at the campsite. The 700m sandy beach (rare on Lake Garda!) is perfect for sunbathing, building sandcastles, and swimming. There are two lagoon pools with waterslides — the 6-year-old will love them. Hire a paddleboard or pedal boat on the lake. Evening: walk the lakeside path to nearby Bardolino village (~40 min) for ice cream and sunset views.
-            </div>
-            <span class="tag rest">Camp day</span>
-            <span class="tag activity">Family time</span>
-            <br>
-            <a href="https://www.camping-cisano.it/en/" class="booking-link" target="_blank">Campsite website</a>
-          </div>
-        </div>
-
-        <!-- Day 6 -->
-        <div class="day-card">
-          <img src="https://images.pexels.com/photos/6749297/pexels-photo-6749297.jpeg" alt="Verona Arena" class="day-image">
-          <div class="day-content">
-            <div class="day-title">Day 6 — Verona: Romeo, Juliet & the Arena (August 6)</div>
-            <div class="day-subtitle">🚗 ~40 min drive | Ancient Roman Amphitheatre</div>
-            <div class="day-description">
-              Leave early to beat August heat. Park at Piazzale Kipling. Visit the Arena di Verona (30 AD Roman amphitheatre, one of the world's best-preserved). Kids can walk the ancient stone tiers. Find Juliet's House and the balcony — the 12-year-old will love it. Walk across the stunning Ponte Scaligero (14th-century fortified bridge). Lunch at a piazza restaurant. Back by late afternoon for a lake swim.
-            </div>
-            <div class="highlights">
-              <h4>Highlights</h4>
-              <ul>
-                <li>Arena di Verona — walk ancient seating, amazing scale</li>
-                <li>Casa di Giulietta — courtyard free, photo op essential</li>
-                <li>Ponte Scaligero — free, gorgeous river views</li>
-                <li>Go early! August crowds are intense by midday</li>
-              </ul>
-            </div>
-            <span class="tag activity">Day trip</span>
-            <br>
-            <a href="https://www.getyourguide.com/verona-arena-l5205/" class="booking-link" target="_blank">Book Arena tour</a>
-          </div>
-        </div>
-
-        <!-- Day 7 -->
-        <div class="day-card">
-          <img src="https://images.pexels.com/photos/12576346/pexels-photo-12576346.jpeg" alt="Roller coaster amusement park" class="day-image">
-          <div class="day-content">
-            <div class="day-title">Day 7 — Camp Day: Gardaland! (August 7)</div>
-            <div class="day-subtitle">🎢 Italy's largest theme park (10 min away!)</div>
-            <div class="day-description">
-              Gardaland is literally 10 minutes from the campsite — Italy's biggest amusement park with 40+ attractions, 7 roller coasters, Peppa Pig Land for the 6-year-old, and high-thrill rides for the 12-year-old. Dynamic pricing: buy online in advance, the earlier the cheaper. Arrive at opening (10am) to beat queues. Bring sunscreen and your own water bottle (food inside is pricey).
-            </div>
-            <div class="highlights">
-              <h4>Gardaland Facts</h4>
-              <ul>
-                <li>40+ attractions for all ages</li>
-                <li>Gate price: €56 adult, €50 child | Online from €44</li>
-                <li>Kids under 90cm enter FREE</li>
-                <li>Book online, never at gate</li>
-                <li>Full day needed to see everything</li>
-              </ul>
-            </div>
-            <span class="tag rest">Camp day activity</span>
-            <br>
-            <a href="https://www.gardaland.it/en/tickets-season-passes/tickets/gardaland-park/" class="booking-link" target="_blank">Book Gardaland tickets</a>
-          </div>
-        </div>
-
-        <!-- Day 8 -->
-        <div class="day-card">
-          <img src="https://images.pexels.com/photos/3714896/pexels-photo-3714896.jpeg" alt="Medieval castle by water" class="day-image">
-          <div class="day-content">
-            <div class="day-title">Day 8 — Sirmione: Medieval Castle (August 8)</div>
-            <div class="day-subtitle">🚗 ~35 min drive | Fairytale fortress</div>
-            <div class="day-description">
-              Sirmione sits on a peninsula jutting into southern Lake Garda. Park outside the historic centre (car-free zone), walk across the drawbridge into the 13th-century Scaligero Castle — surrounded entirely by water! Kids love climbing the towers and walking the battlements. Visit the Grotte di Catullo (Roman ruins at the peninsula's tip, with swimming access). Lunch at a waterfront restaurant. Alternatively, take the ferry from Bardolino directly — kids love the boat ride!
-            </div>
-            <div class="highlights">
-              <h4>Sirmione Highlights</h4>
-              <ul>
-                <li>Scaligero Castle — cross the moat, climb the towers</li>
-                <li>Free entry for under-18s; adults ~€8</li>
-                <li>Grotte di Catullo — largest Roman ruins in north Italy</li>
-                <li>Sandy/rocky beaches for swimming</li>
-              </ul>
-            </div>
-            <span class="tag activity">Day trip</span>
-            <br>
-            <a href="https://www.navigazionelaghi.it/en/" class="booking-link" target="_blank">Lake Garda ferries</a>
-          </div>
-        </div>
-
-        <!-- Day 9 -->
-        <div class="day-card">
-          <img src="https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg" alt="Medieval village by water" class="day-image">
-          <div class="day-content">
-            <div class="day-title">Day 9 — Camp Day (August 9)</div>
-            <div class="day-subtitle">🌊 Lake & Lazise village</div>
-            <div class="day-description">
-              Full lazy beach day. Use the campsite's sandy beach, rent a kayak or paddleboard, swim. No activities, just relaxation. Evening: walk (or cycle) 2km south to Lazise — a medieval harbour village far less touristy than Bardolino. Explore the intact town walls, watch fishing boats, have dinner overlooking the water.
-            </div>
-            <span class="tag rest">Camp day</span>
-            <span class="tag activity">Family evening walk</span>
-          </div>
-        </div>
-
-        <!-- Day 10 -->
-        <div class="day-card">
-          <img src="https://images.pexels.com/photos/18676258/pexels-photo-18676258.jpeg" alt="Mountain cable car view" class="day-image">
-          <div class="day-content">
-            <div class="day-title">Day 10 — Malcesine & Monte Baldo Cable Car (August 10)</div>
-            <div class="day-subtitle">🚗 ~40 min drive | Rotating cabin to 1,760m</div>
-            <div class="day-description">
-              Drive to Malcesine, a picturesque town on the eastern shore. The highlight: the Monte Baldo cable car. This unique lift takes you 1,760m up in just 20 minutes. The second-section cabin slowly rotates 360° — everyone gets unobstructed panoramic views of the entire lake, the Po Valley, and the Alps. It's genuinely awe-inspiring even for jaded teenagers. At the top: alpine meadows, easy walks, cooler temperatures. Book your time slot online beforehand to avoid 1+ hour queues.
-            </div>
-            <div class="highlights">
-              <h4>Monte Baldo Facts</h4>
-              <ul>
-                <li>20-minute ascent with rotating cabin (360° views!)</li>
-                <li>Round-trip: ~€25–30 per person</li>
-                <li>Kids under 1.20m often ride FREE</li>
-                <li>Much cooler at top — bring a layer</li>
-                <li>Book time slot online in advance (queues brutal in Aug)</li>
-              </ul>
-            </div>
-            <span class="tag activity">Day trip — special</span>
-            <br>
-            <a href="https://www.funiviedelbaldo.it/en/funivia-malcesine-monte-baldo-tickets-online" class="booking-link" target="_blank">Book cable car tickets</a>
-          </div>
-        </div>
-
-        <!-- Day 11 -->
-        <div class="day-card">
-          <img src="https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg" alt="Volleyball court on beach" class="day-image">
-          <div class="day-content">
-            <div class="day-title">Day 11 — Camp Day (August 11)</div>
-            <div class="day-subtitle">🌊 Sports, pools & relaxation</div>
-            <div class="day-description">
-              Use the campsite's sports facilities: volleyball, basketball, five-a-side football courts. Afternoon in the pools. The campsite entertainment team usually runs organized kids' games and activities — check the programme board at reception. Evening: mini-disco for the kids (a camp tradition they'll remember!).
-            </div>
-            <span class="tag rest">Camp day</span>
-            <span class="tag activity">Family activities</span>
-          </div>
-        </div>
-
-        <!-- Day 12 -->
-        <div class="day-card">
-          <img src="https://images.pexels.com/photos/2105775/pexels-photo-2105775.jpeg" alt="Renaissance palace architecture" class="day-image">
-          <div class="day-content">
-            <div class="day-title">Day 12 — Mantua: Hidden Renaissance Gem (August 12)</div>
-            <div class="day-subtitle">🚗 ~55 min drive | UNESCO city, your longest day trip</div>
-            <div class="day-description">
-              This is your one longer excursion — and it's absolutely worth it. Mantua is a UNESCO World Heritage city on three lakes, far less touristy than Verona. Visit the Palazzo Ducale (Gonzaga palace) with 500 rooms and stunning frescoed chambers — Mantegna's Camera degli Sposi is jaw-dropping. Walk the beautiful Piazza Sordello and Piazza delle Erbe. Lunch is essential here: try <em>tortelli di zucca</em> (pumpkin pasta), <em>risotto alla pilota</em>, and <em>sbrisolona</em> (crumbly almond cake). Afternoon: rent a rowboat on the lakes for a peaceful perspective of the city walls.
-            </div>
-            <div class="highlights">
-              <h4>Mantua Highlights</h4>
-              <ul>
-                <li>Palazzo Ducale — 500 rooms, incredible Renaissance art</li>
-                <li>Timed entry recommended in August</li>
-                <li>Free entry for under-18s; adults ~€15</li>
-                <li>Food is WORLD-CLASS — don't skip lunch</li>
-                <li>Row boat rental on the lakes</li>
-              </ul>
-            </div>
-            <span class="tag activity">Day trip — special</span>
-            <span class="tag travel">Longer drive</span>
-            <br>
-            <a href="https://www.mantovacollections.it/en/palazzo-ducale" class="booking-link" target="_blank">Book Palazzo Ducale</a>
-          </div>
-        </div>
-
-        <!-- Day 13 -->
-        <div class="day-card">
-          <img src="https://images.pexels.com/photos/3714884/pexels-photo-3714884.jpeg" alt="Relaxing by the lake" class="day-image">
-          <div class="day-content">
-            <div class="day-title">Day 13 — Camp Day: Free Day (August 13)</div>
-            <div class="day-subtitle">🌊 Rest, play, ferry hop</div>
-            <div class="day-description">
-              Rest and play day. Optional: take the campsite ferry to nearby Garda town (~20 min, car-free harbour with boutiques and artisan food shops). Wander, buy local olive oil, have lunch by the water, ferry back. Evening: final campsite dinner with the family. Mini-disco for the kids — it's their last night at camp!
-            </div>
-            <span class="tag rest">Camp day</span>
-            <span class="tag activity">Optional ferry excursion</span>
-          </div>
-        </div>
-
-        <!-- Day 14 -->
-        <div class="day-card">
-          <img src="https://images.pexels.com/photos/9820649/pexels-photo-9820649.jpeg" alt="Car ferry boat" class="day-image">
-          <div class="day-content">
-            <div class="day-title">Day 14 — Lake Ferry & Western Shore (August 14)</div>
-            <div class="day-subtitle">🚗 & 🚢 Car ferry adventure</div>
-            <div class="day-description">
-              A beautiful final adventure. Drive to Garda town (20 min away), explore its narrow cobbled streets. Then drive to nearby Torri del Benaco and take the car ferry across the lake to Toscolano-Maderno on the western shore (~30 min crossing). Kids LOVE being on a car ferry in the middle of a lake! Explore Gargnano (one of the lake's most beautiful, least touristy towns). Lunch with views back to the Alps. Drive back via the scenic south shore. Final lake sunset swim at camp.
-            </div>
-            <div class="highlights">
-              <h4>Ferry Details</h4>
-              <ul>
-                <li>Torri del Benaco–Toscolano ferry runs every 30–60 min</li>
-                <li>~€15 for car + 4 passengers</li>
-                <li>Arrive 15 min early to queue the car</li>
-                <li>Check timetable: navigazionelaghi.it</li>
-              </ul>
-            </div>
-            <span class="tag activity">Day trip</span>
-            <br>
-            <a href="https://www.navigazionelaghi.it/en/" class="booking-link" target="_blank">Ferry timetables</a>
-          </div>
-        </div>
-
-        <!-- Day 15 -->
-        <div class="day-card">
-          <img src="https://images.pexels.com/photos/3652087/pexels-photo-3652087.jpeg" alt="Airport departure" class="day-image">
-          <div class="day-content">
-            <div class="day-title">Day 15 — Return Home (August 15)</div>
-            <div class="day-subtitle">✈️ Lake Garda → Venice → CPH (SK2692)</div>
-            <div class="day-description">
-              Check out of the campsite. Drive ~1.5 hours to Venice Marco Polo Airport along the A4 motorway. Return rental car, check in for SK2692. Leave at least 3 hours before departure — August traffic on the A4 can be heavy. Stop at an Autogrill on the motorway for espresso and cornetto (an Italian institution!).
-            </div>
-            <span class="tag travel">Travel day</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Planning Section -->
-    <section class="section" id="planning">
-      <div class="section-header">📅 Planning & Practical Info</div>
-      <div class="section-content">
-        <h3 style="color: #667eea; margin-bottom: 1rem;">Must-Book in Advance</h3>
-        <ul style="list-style-position: inside; line-height: 2; color: #555;">
-          <li><strong>St. Mark's Basilica</strong> — since July 2025, there are ZERO walk-up tickets. Book at <a href="https://tickets.basilicasanmarco.it" target="_blank" style="color: #667eea;">tickets.basilicasanmarco.it</a></li>
-          <li><strong>Gardaland</strong> — dynamic pricing; book online weeks ahead for best rates</li>
-          <li><strong>Monte Baldo cable car</strong> — time-slot booking essential (avoid 1+ hour queues)</li>
-          <li><strong>Murano glassblowing workshop</strong> — fills up fast in high season</li>
-          <li><strong>Palazzo Ducale Mantua</strong> — timed entry recommended in August</li>
-        </ul>
-
-        <h3 style="color: #667eea; margin-top: 2rem; margin-bottom: 1rem;">Packing Tips for August in Italy</h3>
-        <ul style="list-style-position: inside; line-height: 2; color: #555;">
-          <li><strong>Sun protection:</strong> Strong sunscreen (SPF 50+), hats, sunglasses, rash guards for swimming</li>
-          <li><strong>Clothing:</strong> Light, breathable fabrics; long sleeves for sun protection; one layer for air conditioning</li>
-          <li><strong>Footwear:</strong> Comfortable walking shoes for Venice (lots of walking, lots of bridges); water shoes for beach/pools</li>
-          <li><strong>Other:</strong> Reusable water bottle, lightweight sarong/cover-up, medications, small first-aid kit</li>
-          <li><strong>Documentation:</strong> Passports, travel insurance, booking confirmations (print or screenshot)</li>
-        </ul>
-
-        <h3 style="color: #667eea; margin-top: 2rem; margin-bottom: 1rem;">Restaurant & Food Tips</h3>
-        <div class="info-box">
-          <strong>Venice:</strong> Avoid restaurants directly on St. Mark's Square (tourist trap). Walk 5 min into the alleys — better food, lower prices.
-        </div>
-        <div class="info-box">
-          <strong>Lake Garda:</strong> The campsite has on-site restaurants (pizzeria, restaurants). Local trattorias in Bardolino and Lazise are excellent and family-friendly.
-        </div>
-        <div class="info-box">
-          <strong>Mantua:</strong> One of Italy's great food cities. Try tortelli di zucca, risotto alla pilota. Don't miss Osteria dell'Oca or Trattoria dei Marchesi.
-        </div>
-
-        <h3 style="color: #667eea; margin-top: 2rem; margin-bottom: 1rem;">Key Contacts & Resources</h3>
-        <ul style="list-style-position: inside; line-height: 2; color: #555;">
-          <li><strong>Camping Cisano/San Vito:</strong> <a href="https://www.camping-cisano.it/en/" target="_blank" style="color: #667eea;">camping-cisano.it</a></li>
-          <li><strong>Gardaland:</strong> <a href="https://www.gardaland.it" target="_blank" style="color: #667eea;">gardaland.it</a></li>
-          <li><strong>Lake Garda Ferries:</strong> <a href="https://www.navigazionelaghi.it/en/" target="_blank" style="color: #667eea;">navigazionelaghi.it</a></li>
-          <li><strong>Alilaguna (water bus to Venice):</strong> <a href="https://www.alilaguna.it/en" target="_blank" style="color: #667eea;">alilaguna.it</a></li>
-        </ul>
-
-        <div style="background: #667eea; color: white; padding: 1.5rem; border-radius: 8px; margin-top: 2rem; text-align: center;">
-          <h3 style="color: white; margin-bottom: 1rem;">Have an amazing trip!</h3>
-          <p style="margin: 0;">Venice and Lake Garda are truly magical. Your kids will remember this forever. 🇮🇹✨</p>
-        </div>
-      </div>
-    </section>
+<main class="main">
+  <div class="legend">
+    <div class="legend-item"><span class="legend-dot" style="background:var(--teal)"></span>Rest / Beach</div>
+    <div class="legend-item"><span class="legend-dot" style="background:var(--purple)"></span>Rest + Meeting</div>
+    <div class="legend-item"><span class="legend-dot" style="background:var(--ocean)"></span>Excursion</div>
+    <div class="legend-item"><span class="legend-dot" style="background:var(--terracota)"></span>Long Day</div>
+    <div class="legend-item"><span class="legend-dot" style="background:var(--brown)"></span>Arrival / Departure</div>
   </div>
 
-  <footer>
-    <p>&copy; 2026 Family Holiday Planner | <a href="https://github.com/tvlins-git/italy2026" target="_blank">View on GitHub</a></p>
-    <p style="margin-top: 1rem; font-size: 0.9rem;">Last updated: January 2026</p>
-  </footer>
+  <article class="day-card" id="day1">
+    <img class="day-photo" src="https://images.pexels.com/photos/3354898/pexels-photo-16533275.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Colomares Castle Benalmadena" loading="lazy">
+    <div class="day-header header-transit">
+      <div class="day-header-left"><span class="day-num">Day 1</span><span class="day-date">Saturday 20 June</span></div>
+      <span class="day-type-badge">Arrival</span>
+    </div>
+    <div class="day-body">
+      <h2 class="day-title">Arrival via Colomares Castle</h2>
+      <p class="day-desc">Your Andalucían adventure begins at Málaga airport. Pick up the rental car and head west on the A-7 — but before continuing to Cádiz, stop at Colomares Castle in Benalmádena, an extraordinary monument built entirely by hand between 1987 and 1994 as a tribute to Christopher Columbus. It blends Gothic, Byzantine and Mudéjar styles into something that looks straight out of a fairy tale — every turret and archway begs to be explored. Inside the grounds is the world's smallest church, at under 2 square metres, listed in the Guinness Book of Records. Allow about an hour, then continue to Cádiz (roughly 1h 45 min). Arrive mid-afternoon, check in, and find somewhere for your first evening tapas.</p>
+      <p class="day-tip">Aim to arrive before 1pm — the castle closes 2pm–5pm in summer. Entrance €3 adults / €2 children, bought at the door.</p>
+      <div class="day-links"><a href="https://www.visitbenalmadena.com/en/castillo-de-colomares/" target="_blank" class="day-link">↗ Colomares Castle info</a></div>
+    </div>
+  </article>
+
+  <article class="day-card" id="day2">
+    <img class="day-photo" src="https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Cadiz La Caleta beach" loading="lazy">
+    <div class="day-header header-beach">
+      <div class="day-header-left"><span class="day-num">Day 2</span><span class="day-date">Sunday 21 June</span></div>
+      <span class="day-type-badge">Rest / Beach</span>
+    </div>
+    <div class="day-body">
+      <h2 class="day-title">Cádiz Beaches &amp; Parque Genovés</h2>
+      <p class="day-desc">A gentle first full day to find your feet. Start at La Caleta, the small beach tucked inside the historic centre — sheltered, compact, and ideal for young children, sitting between two old sea forts. In the afternoon walk to Parque Genovés — one of the most beautiful parks in Andalucía, with a climbable waterfall, shaded paths, a playground and a café. End the day with tapas in the La Viña neighbourhood, Cádiz's liveliest local barrio.</p>
+      <p class="day-tip">No agenda and no car needed — everything is walkable from the old town.</p>
+      <div class="day-links"><a href="https://visitingcadiz.com/la-caleta-beach-cadiz/" target="_blank" class="day-link">↗ La Caleta info</a><a href="https://www.cadizturismo.com/en/naturaleza/parques-y-jardines/parque-genoves/" target="_blank" class="day-link">↗ Parque Genovés</a></div>
+    </div>
+  </article>
+
+  <article class="day-card" id="day3">
+    <img class="day-photo" src="https://images.pexels.com/photos/1885213/pexels-photo-3889843.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="El Puerto de Santa Maria Spain harbour" loading="lazy">
+    <div class="day-header header-excursion">
+      <div class="day-header-left"><span class="day-num">Day 3</span><span class="day-date">Monday 22 June</span></div>
+      <span class="day-type-badge">Excursion</span>
+    </div>
+    <div class="day-body">
+      <h2 class="day-title">El Puerto de Santa María — Train Out, Boat Back</h2>
+      <p class="day-desc">Leave the car at the hotel and walk to Cádiz train station. The train to El Puerto de Santa María takes just 23 minutes and runs very frequently. Explore the old town, visit the Castillo de San Marcos, and have a long seafood lunch on the Ribera del Marisco — one of the finest strips of fish restaurants in the province. In the afternoon take the catamaran back to Cádiz. As you approach from the water, the city's white skyline appears in a way you simply can't see from the road — a genuinely memorable arrival for the whole family.</p>
+      <p class="day-tip">Buy the return catamaran ticket on arrival in El Puerto — popular evening crossings sell out. Crossing ~30 min, ~€5 per person.</p>
+      <div class="day-links"><a href="https://www.turismoelpuerto.com/en/" target="_blank" class="day-link">↗ El Puerto tourism</a><a href="https://www.cmtbc.es/en/" target="_blank" class="day-link">↗ Catamaran timetable</a></div>
+    </div>
+  </article>
+
+  <article class="day-card" id="day4">
+    <img class="day-photo" src="https://images.pexels.com/photos/17057655/pexels-photo-17057655.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Torre Tavira Cadiz Spain tower" loading="lazy">
+    <div class="day-header header-meeting">
+      <div class="day-header-left"><span class="day-num">Day 4</span><span class="day-date">Tuesday 23 June</span></div>
+      <span class="day-type-badge">Rest + Meeting · 10:30–11:30</span>
+    </div>
+    <div class="day-body">
+      <h2 class="day-title">Cádiz Culture Day</h2>
+      <p class="day-desc">After the morning meeting, explore the old town at a relaxed pace. Torre Tavira is the city's 18th-century watchtower and home to a camera obscura that projects a live, moving image of the city onto a curved screen — magical for children. Then the Cathedral: the baroque golden dome is one of the great Andalucían sights, and the tower is climbed by ramp rather than stairs, making it accessible for everyone. The combined ticket covers the tower, crypt and museum.</p>
+      <p class="day-tip">Book Torre Tavira time slots online in advance — capacity is limited and slots fill quickly in summer.</p>
+      <div class="day-links"><a href="https://torretavira.com/en/reservas" target="_blank" class="day-link">↗ Book Torre Tavira</a><a href="https://cadizsacra.es/online-tickets/" target="_blank" class="day-link">↗ Cathedral tickets</a></div>
+    </div>
+  </article>
+
+  <article class="day-card" id="day5">
+    <img class="day-photo" src="https://images.pexels.com/photos/17743377/pexels-photo-17743377.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Ronda Puente Nuevo bridge gorge Andalucia" loading="lazy">
+    <div class="day-header header-long">
+      <div class="day-header-left"><span class="day-num">Day 5</span><span class="day-date">Wednesday 24 June</span></div>
+      <span class="day-type-badge">Long Day</span>
+    </div>
+    <div class="day-body">
+      <h2 class="day-title">Ronda via Arcos de la Frontera</h2>
+      <p class="day-desc">Leave by 8:30am for the most dramatic day of the trip. Stop first at Arcos de la Frontera — a white village perched on a sheer cliff above a gorge, about 30 minutes from Cádiz. Spend an hour exploring its narrow lanes and vertiginous views, then continue to Ronda. The Puente Nuevo bridge over El Tajo gorge is one of the great sights of Andalucía — the drama of looking straight down into the ravine will captivate even the youngest traveller. Walk the old town, visit the Plaza de Toros, and have a long lunch with mountain views. Leave by 4:30pm.</p>
+      <p class="day-tip">Wednesday is a weekday — far fewer tourists than the weekend. Leave early and return by early evening.</p>
+      <div class="day-links"><a href="https://www.turismoderonda.es/en/" target="_blank" class="day-link">↗ Ronda tourism</a><a href="https://www.cadizturismo.com/en/municipios/arcos-de-la-frontera/" target="_blank" class="day-link">↗ Arcos de la Frontera</a></div>
+    </div>
+  </article>
+
+  <article class="day-card" id="day6">
+    <img class="day-photo" src="https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Playa Victoria Cadiz long sandy beach" loading="lazy">
+    <div class="day-header header-beach">
+      <div class="day-header-left"><span class="day-num">Day 6</span><span class="day-date">Thursday 25 June</span></div>
+      <span class="day-type-badge">Rest / Beach</span>
+    </div>
+    <div class="day-body">
+      <h2 class="day-title">Playa Victoria &amp; Mercado Central</h2>
+      <p class="day-desc">A restorative day after the long drive to Ronda. Start the morning at the Mercado Central de Abastos — Cádiz's lively covered fish market, where the city's restaurants and home cooks do their morning shopping. Gleaming fresh tuna, giant prawns and every variety of local shellfish on ice. Then head to Playa Victoria, the long sandy beach on the south side of the city — wider, calmer and more spacious than La Caleta, with chiringuitos (beach bars) along the front for lunch and cold drinks.</p>
+      <p class="day-tip">The market is best between 9am and noon. Playa Victoria is a short taxi or walk from the old town.</p>
+      <div class="day-links"><a href="https://visitingcadiz.com/victoria-beach-cadiz/" target="_blank" class="day-link">↗ Playa Victoria info</a><a href="https://www.cadizturismo.com/en/gastronomia/mercados/mercado-central/" target="_blank" class="day-link">↗ Mercado Central</a></div>
+    </div>
+  </article>
+
+  <article class="day-card" id="day7">
+    <img class="day-photo" src="https://images.pexels.com/photos/3757145/pexels-photo-17057655.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Cadiz old town white buildings Spain" loading="lazy">
+    <div class="day-header header-meeting">
+      <div class="day-header-left"><span class="day-num">Day 7</span><span class="day-date">Friday 26 June</span></div>
+      <span class="day-type-badge">Rest + Meeting · 13:30–14:30</span>
+    </div>
+    <div class="day-body">
+      <h2 class="day-title">Old Town Morning &amp; Free Afternoon</h2>
+      <p class="day-desc">A morning to explore El Pópulo — the oldest neighbourhood in Cádiz, a labyrinth of Roman-era lanes tucked behind the Cathedral. Or revisit La Caleta for a morning swim. The meeting falls right in the middle of the day, so keep the pace relaxed on both sides. After the meeting, the afternoon is entirely free — a good opportunity to find a favourite restaurant for a leisurely late lunch, or wander the seafront watching the Atlantic light change.</p>
+      <p class="day-tip">No driving today — the meeting is in the city centre and everything is on foot.</p>
+      <div class="day-links"><a href="https://visitingcadiz.com/el-populo-cadiz/" target="_blank" class="day-link">↗ El Pópulo guide</a></div>
+    </div>
+  </article>
+
+  <article class="day-card" id="day8">
+    <img class="day-photo" src="https://images.pexels.com/photos/1996333/pexels-photo-3408387.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="White Andalusian horse dressage equestrian" loading="lazy">
+    <div class="day-header header-excursion">
+      <div class="day-header-left"><span class="day-num">Day 8</span><span class="day-date">Saturday 27 June</span></div>
+      <span class="day-type-badge">Excursion</span>
+    </div>
+    <div class="day-body">
+      <h2 class="day-title">Jerez de la Frontera</h2>
+      <p class="day-desc">Head to Jerez — the spiritual home of sherry and Andalucían horsemanship. The Royal Andalusian School of Equestrian Art runs morning training sessions on Saturdays: pure white Carthusian horses performing dressage movements in a stunning 19th-century riding hall. Book tickets in advance. Afterwards walk the handsome old town and have lunch. For a sherry bodega, González Byass (Tío Pepe) is the most family-friendly — vast cathedral-like bodegas filled with barrels signed by visiting dignitaries.</p>
+      <p class="day-tip">Book equestrian school tickets in advance online. The drive from Cádiz is about 45 minutes. Closed Sundays.</p>
+      <div class="day-links"><a href="https://ventas.realescuela.org/" target="_blank" class="day-link">↗ Book equestrian school</a><a href="https://www.gonzalezbyass.com/en/visit-us/" target="_blank" class="day-link">↗ González Byass tours</a></div>
+    </div>
+  </article>
+
+  <article class="day-card" id="day9">
+    <img class="day-photo" src="https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Atlantic ocean beach sunset Spain" loading="lazy">
+    <div class="day-header header-beach">
+      <div class="day-header-left"><span class="day-num">Day 9</span><span class="day-date">Sunday 28 June</span></div>
+      <span class="day-type-badge">Rest / Beach</span>
+    </div>
+    <div class="day-body">
+      <h2 class="day-title">Free Day — At Your Own Pace</h2>
+      <p class="day-desc">A recovery day and a chance to do everything at the family's own pace. Revisit whichever beach won the vote, have a long seafood lunch somewhere you've been meaning to try, or take an evening walk along the city walls watching the light change over the Atlantic. Cádiz is at its best when you're not in a hurry — the old city is small enough to wander without a plan, and the evenings are long and warm in late June.</p>
+      <p class="day-tip">No agenda. Use this day however feels right after the busy week of excursions.</p>
+      <div class="day-links"><a href="https://visitingcadiz.com/cadiz-city-walls/" target="_blank" class="day-link">↗ Cádiz city walls walk</a></div>
+    </div>
+  </article>
+
+  <article class="day-card" id="day10">
+    <img class="day-photo" src="https://images.pexels.com/photos/1115804/pexels-photo-1300510.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Tropical green park garden fountain" loading="lazy">
+    <div class="day-header header-meeting">
+      <div class="day-header-left"><span class="day-num">Day 10</span><span class="day-date">Monday 29 June</span></div>
+      <span class="day-type-badge">Rest + Meeting · 10:30–11:30</span>
+    </div>
+    <div class="day-body">
+      <h2 class="day-title">Parque Genovés &amp; Beach Afternoon</h2>
+      <p class="day-desc">A gentle morning around the old town before the meeting. Parque Genovés is right in the city centre — a great spot to let the children run around, with a playground, shaded paths and a climbable waterfall. After the meeting, head to La Caleta or Playa Victoria for a long afternoon on the beach. This is your last proper lazy beach day before the final run of excursions.</p>
+      <p class="day-tip">All on foot — no car needed today.</p>
+      <div class="day-links"><a href="https://visitingcadiz.com/la-caleta-beach-cadiz/" target="_blank" class="day-link">↗ La Caleta</a><a href="https://visitingcadiz.com/victoria-beach-cadiz/" target="_blank" class="day-link">↗ Playa Victoria</a></div>
+    </div>
+  </article>
+
+  <article class="day-card" id="day11">
+    <img class="day-photo" src="https://images.pexels.com/photos/4388164/pexels-photo-9520085.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Ancient Roman ruins columns Spain" loading="lazy">
+    <div class="day-header header-excursion">
+      <div class="day-header-left"><span class="day-num">Day 11</span><span class="day-date">Tuesday 30 June</span></div>
+      <span class="day-type-badge">Excursion</span>
+    </div>
+    <div class="day-body">
+      <h2 class="day-title">Bolonia Beach &amp; Roman Ruins</h2>
+      <p class="day-desc">Drive south to Baelo Claudia — one of the most complete Roman towns in Spain, with a forum, basilica, temples, theatre and thermal baths, all right on the beach. Free entry for EU residents. Spend 2–3 hours exploring the ruins, then have lunch at one of the beach restaurants. The afternoon is spent on Playa de Bolonia — one of the most beautiful beaches in Andalucía, with enormous Atlantic dunes stretching back from the water and a wild, unspoilt feel quite unlike the town beaches.</p>
+      <p class="day-tip">Closed Mondays — Tuesday is correct. Drive ~1 hour from Cádiz. Free entry for EU passport holders.</p>
+      <div class="day-links"><a href="https://www.juntadeandalucia.es/cultura/enclaves/enclave-arqueologico-baelo-claudia" target="_blank" class="day-link">↗ Baelo Claudia official</a><a href="https://visitingcadiz.com/bolonia-beach/" target="_blank" class="day-link">↗ Playa de Bolonia</a></div>
+    </div>
+  </article>
+
+  <article class="day-card" id="day12">
+    <img class="day-photo" src="https://images.pexels.com/photos/3757228/pexels-photo-12838142.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Seville Real Alcazar Moorish palace gardens" loading="lazy">
+    <div class="day-header header-excursion">
+      <div class="day-header-left"><span class="day-num">Day 12</span><span class="day-date">Wednesday 1 July</span></div>
+      <span class="day-type-badge">Excursion</span>
+    </div>
+    <div class="day-body">
+      <h2 class="day-title">Seville</h2>
+      <p class="day-desc">Leave by 8:30am for the grandest day of the trip. Start with the Real Alcázar — a royal palace of extraordinary Moorish architecture, with elaborate gardens, fountains and tiled courtyards. Book tickets well in advance — July queues can be very long. Afterwards walk through the Barrio de Santa Cruz for lunch among whitewashed lanes and orange trees. In the afternoon, the Cathedral and Giralda tower (climbed by ramp) rewards with panoramic city views. Leave by 4:30–5pm.</p>
+      <p class="day-tip">Wednesday is the best weekday — fewest crowds mid-week. Consider the train from Cádiz (hourly, ~1h 40 min) to avoid parking. Book Alcázar well in advance.</p>
+      <div class="day-links"><a href="https://www.realalcazarsevilla.com/en" target="_blank" class="day-link">↗ Book Real Alcázar</a><a href="https://www.catedraldesevilla.es/en/visit/" target="_blank" class="day-link">↗ Seville Cathedral</a><a href="https://www.renfe.com/en/" target="_blank" class="day-link">↗ Renfe trains</a></div>
+    </div>
+  </article>
+
+  <article class="day-card" id="day13">
+    <img class="day-photo" src="https://images.pexels.com/photos/1530259/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Airport terminal departure travel" loading="lazy">
+    <div class="day-header header-transit">
+      <div class="day-header-left"><span class="day-num">Day 13</span><span class="day-date">Thursday 2 July</span></div>
+      <span class="day-type-badge">Departure</span>
+    </div>
+    <div class="day-body">
+      <h2 class="day-title">Departure — Cádiz to Málaga Airport</h2>
+      <p class="day-desc">Check out and drive back to Málaga Airport — approximately 2 hours. In summer, leave by 9am at the latest to be comfortable for most morning or midday flights. Return the rental car at the terminal and depart. If time allows, a final coffee and pastry on the seafront in the old town makes a perfect send-off.</p>
+      <p class="day-tip">Allow extra time for summer traffic on the A-7/AP-4. Leave no later than 9am.</p>
+      <div class="day-links"><a href="https://www.aena.es/en/malaga-costa-del-sol.html" target="_blank" class="day-link">↗ Málaga Airport info</a></div>
+    </div>
+  </article>
+
+  <section id="tickets">
+    <h2 class="section-title">Tickets &amp; Advance Bookings</h2>
+    <div class="section-rule"></div>
+    <p style="font-size:.85rem;color:var(--mid);font-style:italic;margin-bottom:1.25rem;">Listed in trip order. Essential = book as soon as possible.</p>
+
+    <div class="ticket-card ticket-essential">
+      <div class="ticket-header"><span class="day-ref">Day 4 — Tue 23 Jun</span><span class="urgency">⚠ Essential</span></div>
+      <div class="ticket-body"><p class="ticket-name">Torre Tavira (Camera Obscura), Cádiz</p><p class="ticket-notes">Capacity strictly limited. Reserve time slot free online; pay €8 per person on arrival. Slots fill quickly in July.</p><a href="https://torretavira.com/en/reservas" target="_blank" class="ticket-link">↗ torretavira.com/en/reservas</a></div>
+    </div>
+    <div class="ticket-card ticket-recommended">
+      <div class="ticket-header"><span class="day-ref">Day 4 — Tue 23 Jun</span><span class="urgency">Recommended</span></div>
+      <div class="ticket-body"><p class="ticket-name">Cádiz Cathedral + Tower</p><p class="ticket-notes">Online tickets (€8) skip the queue. Tower by ramp — fully accessible. Covers cathedral, tower, crypt and museum.</p><a href="https://cadizsacra.es/online-tickets/" target="_blank" class="ticket-link">↗ cadizsacra.es/online-tickets</a></div>
+    </div>
+    <div class="ticket-card ticket-essential">
+      <div class="ticket-header"><span class="day-ref">Day 8 — Sat 27 Jun</span><span class="urgency">⚠ Essential</span></div>
+      <div class="ticket-body"><p class="ticket-name">Royal Andalusian School of Equestrian Art, Jerez</p><p class="ticket-notes">Morning training sessions (Sat 10:00–13:00). Buy direct from official site. Closed Sundays.</p><a href="https://ventas.realescuela.org/" target="_blank" class="ticket-link">↗ ventas.realescuela.org</a></div>
+    </div>
+    <div class="ticket-card ticket-recommended">
+      <div class="ticket-header"><span class="day-ref">Day 8 — Sat 27 Jun</span><span class="urgency">Recommended</span></div>
+      <div class="ticket-body"><p class="ticket-name">González Byass (Tío Pepe) Bodega, Jerez</p><p class="ticket-notes">Book ahead for preferred time. Family-friendly — non-alcoholic options available.</p><a href="https://www.gonzalezbyass.com/en/visit-us/" target="_blank" class="ticket-link">↗ gonzalezbyass.com/en/visit-us</a></div>
+    </div>
+    <div class="ticket-card ticket-essential">
+      <div class="ticket-header"><span class="day-ref">Day 12 — Wed 1 Jul</span><span class="urgency">⚠ Essential — book now</span></div>
+      <div class="ticket-body"><p class="ticket-name">Real Alcázar, Seville</p><p class="ticket-notes">July queues without a ticket can mean 2+ hours wait or being turned away. Strict 30-minute entry windows — do not miss your slot.</p><a href="https://www.realalcazarsevilla.com/en" target="_blank" class="ticket-link">↗ realalcazarsevilla.com/en</a></div>
+    </div>
+    <div class="ticket-card ticket-recommended">
+      <div class="ticket-header"><span class="day-ref">Day 12 — Wed 1 Jul</span><span class="urgency">Recommended</span></div>
+      <div class="ticket-body"><p class="ticket-name">Seville Cathedral &amp; Giralda Tower</p><p class="ticket-notes">Advance booking guarantees your time slot. Tower by ramp — accessible for all.</p><a href="https://www.catedraldesevilla.es/en/visit/" target="_blank" class="ticket-link">↗ catedraldesevilla.es/en/visit</a></div>
+    </div>
+
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--navy);margin:2rem 0 .5rem;">No Booking Required</h3>
+    <div class="section-rule" style="height:1px;margin-bottom:1rem;"></div>
+    <div class="free-grid">
+      <div class="free-item"><p class="free-item-name">Baelo Claudia Roman Ruins (Day 11)</p><p class="free-item-note">Free for EU passport holders. Just turn up.</p></div>
+      <div class="free-item"><p class="free-item-name">Colomares Castle (Day 1)</p><p class="free-item-note">€3 adults / €2 children at the door.</p></div>
+      <div class="free-item"><p class="free-item-name">El Puerto de Santa María (Day 3)</p><p class="free-item-note">Train at Cádiz station, catamaran at the port.</p></div>
+      <div class="free-item"><p class="free-item-name">Parque Genovés, Cádiz</p><p class="free-item-note">Free public park.</p></div>
+      <div class="free-item"><p class="free-item-name">La Caleta &amp; Playa Victoria</p><p class="free-item-note">Free public beaches.</p></div>
+      <div class="free-item"><p class="free-item-name">Playa de Bolonia (Day 11)</p><p class="free-item-note">Free public beach.</p></div>
+      <div class="free-item"><p class="free-item-name">Barrio de Santa Cruz, Seville</p><p class="free-item-note">Free to walk — one of the best areas in Seville.</p></div>
+      <div class="free-item"><p class="free-item-name">Arcos de la Frontera (Day 5)</p><p class="free-item-note">Free to explore the village and viewpoints.</p></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p><strong>Bon voyage — enjoy the sunshine, the seafood, and the white villages of Andalucía!</strong></p>
+  <p style="margin-top:.75rem;font-size:.75rem;">Cádiz Family Holiday · 20 June – 2 July 2026</p>
+</footer>
+
+<script>
+  var tabs = document.querySelectorAll('.day-tab[href^="#day"]');
+  var sections = Array.from(tabs).map(function(t){ return document.querySelector(t.getAttribute('href')); }).filter(Boolean);
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        tabs.forEach(function(t){ t.classList.remove('active'); });
+        var active = document.querySelector('.day-tab[href="#' + entry.target.id + '"]');
+        if (active) { active.classList.add('active'); active.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'}); }
+      }
+    });
+  }, {threshold: 0.4});
+  sections.forEach(function(s){ observer.observe(s); });
+</script>
 </body>
 </html>
